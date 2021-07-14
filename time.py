@@ -6,6 +6,7 @@ def startTime():
 
 def time():
     datetime = startTime()
+    #trigger chaque jour
     if datetime.value == "00h00":
         actions.checkActions()
 
