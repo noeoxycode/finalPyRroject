@@ -1,0 +1,43 @@
+{
+    "scenario": [{
+        "id" : 1,
+        "name" : "Shingeki No Kyojin",
+        "description" : "Vous etes le roi des murs Sina, Rose et Maria. Les murs protegent le reste de la population depuis plus de cent ans. Votre objectif, ici, est de repousser les Titans, ces immenses creatures devorant des humains pour leur plaisir. Des personnages viendront vous proposer des marches que vous etes en mesure d’accepter ou non. Gardez juste votre objectif en tete : faire perdurer la race humaine.",
+        "date" : "11-07-2150",
+        "game" : {
+            "wood" : 50,
+            "iron" : 20,
+            "people" : 150,
+            "houses" : 5,
+            "food" : 100,
+            "dateTime" : null,
+            "satisfaction" : "15%",
+            "levels" : {
+                "wood" : 1,
+                "iron" : 1,
+                "food" : 2
+            }
+        },
+        "events": [ 1, 2, 3 ]
+    },{
+        "id" : 2,
+        "name" : "test",
+        "description" : "Vous etes le roi des murs Sina, Rose et Maria. Les murs protegent le reste de la population depuis plus de cent ans. Votre objectif, ici, est de repousser les Titans, ces immenses creatures devorant des humains pour leur plaisir. Des personnages viendront vous proposer des marches que vous etes en mesure d’accepter ou non. Gardez juste votre objectif en tete : faire perdurer la race humaine.",
+        "date" : "11-07-2150",
+        "game" : {
+            "wood" : 25,
+            "iron" : 20,
+            "people" : 150,
+            "houses" : 5,
+            "food" : 100,
+            "dateTime" : null,
+            "satisfaction" : "15%",
+            "levels" : {
+                "wood" : 1,
+                "iron" : 1,
+                "food" : 2
+            }
+        },
+        "events": [ 1, 2, 3 ]
+    }]
+}
