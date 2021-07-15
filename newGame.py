@@ -2,7 +2,7 @@ import json
 
 from initialize import Initialize
 
-
+# permet de choisir le scénario que le joueur veut
 def newGame():
     i = 1;
     print("Choisissez un scénario: ")
