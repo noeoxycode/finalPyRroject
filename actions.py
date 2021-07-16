@@ -1,17 +1,28 @@
+import json
+from random import choice
+
 import game
 
 
-def endGame:
+def endGame():
     print("Game over")
 
 #renvoie un event
 def getEvent():
     #recuperation de l'event puis return
+    file = open("Events.json")
+    data = json.load(file)
+    events = data['events']
+    idMax = max(events, key=lambda ev: ev['id'])
+    random = choice(range(0, idMax['id'], 1))
+    #print(random)
+    event = events[random-1]
+    print(event)
     return event
 
 
 #check si la partie est finie
-def checkEndGame(Game game):
+def checkEndGame(game):
     if game.satisfaction <= 0:
         return 1
     else :
@@ -19,14 +30,15 @@ def checkEndGame(Game game):
 
 
 #application de l'event sur l'objet game
-def applyEvent (Game game, Event event):
-
+def applyEvent (game, event):
+    return 0
 
 
 #check si il est temps de fournir un event,si oui on getEvent puis applyEvent
-def checkEvent(Game game):
-    if cptWithoutEvent = game.cptWithoutEvent
-        Event newEvent = getEvent()
+def checkEvent(game):
+    cptWithoutEvent = 0
+    if cptWithoutEvent == game.cptWithoutEvent:
+        newEvent = getEvent()
         applyEvent(game, newEvent)
 
 

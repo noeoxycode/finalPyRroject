@@ -2,6 +2,7 @@
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import actions
 from loadGame import loadGame
 from newGame import newGame
 
@@ -13,7 +14,8 @@ def start():
     while i!=1 or i!=2:
         i = int(input())
         if i == 1:
-            newGame()
+            actions.getEvent()
+            #newGame()
         elif i == 2:
             loadGame()
         else:
