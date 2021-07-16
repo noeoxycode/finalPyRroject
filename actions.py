@@ -15,9 +15,7 @@ def getEvent():
     events = data['events']
     idMax = max(events, key=lambda ev: ev['id'])
     random = choice(range(0, idMax['id'], 1))
-    #print(random)
     event = events[random-1]
-    print(event)
     return event
 
 
