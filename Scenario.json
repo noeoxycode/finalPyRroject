@@ -11,7 +11,7 @@
             "houses" : 5,
             "food" : 100,
             "dateTime" : null,
-            "satisfaction" : "15%",
+            "satisfaction" : 15,
             "levels" : {
                 "wood" : 1,
                 "iron" : 1,
@@ -31,7 +31,7 @@
             "houses" : 5,
             "food" : 100,
             "dateTime" : null,
-            "satisfaction" : "15%",
+            "satisfaction" : 15,
             "levels" : {
                 "wood" : 1,
                 "iron" : 1,

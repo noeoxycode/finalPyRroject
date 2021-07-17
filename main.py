@@ -2,15 +2,21 @@
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from loadGame import loadGame
+from newGame import newGame
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+# début du programme, permet de choisir si on veut commencer une nouvelle partie ou charger une partie existante
+def start():
+    print("\nBonjour et bienvenue à The King of Pountos\n")
+    print("1 Nouvelle partie\n2 Charger une partie")
+    i = 0
+    while i!=1 or i!=2:
+        i = int(input())
+        if i == 1:
+            newGame()
+        elif i == 2:
+            loadGame()
+        else:
+            print("Mettez un nombre entre 1 et 2")
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    start()

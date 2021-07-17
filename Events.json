@@ -1,0 +1,16 @@
+{
+    "events": [{
+        "id" : 1,
+        "name" : "Expédition extra muros",
+        "description" : "Une expédition extra muros est organisée par le commandant Erwin Smith. Le but de cet expédition est de récupérer le district de Trost. Sans ce dernier, vous n’aurez jamais assez de nourriture pour la population des murs. Souhaitez vous y aller ? ",
+        "choices" : ["Oui", "Non"],
+        "effects": ["+1 level nourriture", "-15 bois", "+10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "-15 habitation", "+10 population", "+15 satisfaction"]
+    },
+    {
+        "id" : 2,
+        "name" : "Attaque dans le mur Sina",
+        "description" : "Des titans sont apparus à l'intérieur du mur Sina. La garnison n'a trouvé aucune faille dans le mur. Le mystère s'aggrandi donc autour des titans. Que voulez-vous faire ?",
+        "choices" : ["Envoyez les armées essayer de tuer les titans.", "Attendre que la nuit tombe pour intervenir (les titans ne bougent pas la nuit)"],
+        "effects": ["+1 level nourriture", "-15 bois", "+10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "-15 habitation", "+10 population", "+15 satisfaction"]
+    }] 
+}
