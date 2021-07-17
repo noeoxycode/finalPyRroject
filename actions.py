@@ -52,8 +52,6 @@ def applyEvent(event):
             elif argsMat[2] == "fer":
                 game['levels']['iron'] += int(event['effects'][i].split()[0])
 
-    return 0
-
 
 # check si il est temps de fournir un event,si oui on getEvent puis applyEvent
 def checkEvent():
