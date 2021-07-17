@@ -1,30 +1,34 @@
 import time
 
 game = {
-    "wood": 50,
-    "iron": 20,
-    "food": 100,
-    "people": 150,
-    "houses": 5,
+    "wood": 0,
+    "iron": 0,
+    "food": 0,
+    "people": 0,
+    "houses": 0,
     "dateTime": 0,
-    "satisfaction": 15,
+    "satisfaction": 0,
     "levels": {
-        "wood": 1,
-        "iron": 1,
-        "food": 2
+        "wood": 0,
+        "iron": 0,
+        "food": 0
     }
 }
 
 
-class Game:
-    def __init__(self, wood, iron, satisfaction):
-        game['wood'] = wood
-        game['iron'] = iron
-        game['satisfaction'] = satisfaction
-
-
-# game = Game(10, 10, 10)
-
-
 def gameInit():
     time.time()
+
+
+def setValues(content, dif):
+    game['wood'] = content['wood'] * dif
+    game['iron'] = content['iron'] * dif
+    game['satisfaction'] = content['satisfaction'] * dif
+    game['food'] = content['food'] * dif
+    game['houses'] = content['houses'] * dif
+    game['people'] = content['people'] * dif
+    game['levels']['wood'] = content['levels']['wood'] * dif
+    game['levels']['iron'] = content['levels']['iron'] * dif
+    game['levels']['food'] = content['levels']['food'] * dif
+
+    print(game)

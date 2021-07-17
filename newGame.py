@@ -1,9 +1,10 @@
 import json
 
-from initialize import Initialize
-
 
 # permet de choisir le scénario que le joueur veut
+from initialize import initialize
+
+
 def newGame():
     i = 1;
     print("Choisissez un scénario: ")
@@ -15,4 +16,4 @@ def newGame():
 
     file.close()
     id = int(input())
-    Initialize.initialize(id)
+    initialize(id)
