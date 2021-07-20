@@ -17,6 +17,7 @@ def initialize(id):
                 "food": txt['game']['food'],
                 "people": txt['game']['people'],
                 "houses": txt['game']['houses'],
+                "date": txt['date'],
                 "dateTime": 0,
                 "satisfaction": txt['game']['satisfaction'],
                 "levels": {

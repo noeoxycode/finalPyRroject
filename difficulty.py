@@ -1,6 +1,6 @@
 def difficulty():
     i = 0
-    print("Choisir un niveau de dificulté:")
+    print("Choisir un niveau de difficulté:")
     print("1 facile\n2 moyen\n3 difficile")
 
     while i!=1 or i!=2 or i!=3:

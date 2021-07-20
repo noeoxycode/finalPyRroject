@@ -17,6 +17,11 @@ def getEvent():
     idMax = max(events, key=lambda ev: ev['id'])
     random = choice(range(0, idMax['id'], 1))
     event = events[random - 1]
+
+    print(event['name'])
+    print(event['description'])
+    file.close()
+
     return event
 
 
@@ -51,6 +56,8 @@ def applyEvent(event):
                 game['levels']['wood'] += int(event['effects'][i].split()[0])
             elif argsMat[2] == "fer":
                 game['levels']['iron'] += int(event['effects'][i].split()[0])
+    print(event)
+    print(game)
 
 
 # check si il est temps de fournir un event,si oui on getEvent puis applyEvent
@@ -58,7 +65,17 @@ def checkEvent():
     cptWithoutEvent = 0
     if cptWithoutEvent == game.cptWithoutEvent:
         newEvent = getEvent()
-        applyEvent(newEvent)
+        # afficher choix pour joueur
+        choice = getChoices(newEvent)
+        if choice == 1:
+            applyEvent(newEvent)
+
+
+def getChoices(event):
+    for i in range(len(event['choices'])):
+        print(i, event['choices'][i])
+    id = int(input())
+    return id
 
 
 # check si la partie et finie, si elle ne l'est pas, lance checkEvent

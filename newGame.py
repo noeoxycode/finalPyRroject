@@ -6,7 +6,7 @@ from initialize import initialize
 
 
 def newGame():
-    i = 1;
+    i = 1
     print("Choisissez un scénario: ")
     file = open("Scenario.json")
     data = json.load(file)
