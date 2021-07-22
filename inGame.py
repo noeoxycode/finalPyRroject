@@ -13,10 +13,12 @@ def menuChoice(value):
     elif value == 3 : putWorkerOnWork();
     else : print("Erreur de saisie, veuillez reessayer")
 
-
+#affiche le nombre de workers par poste de travail
+#exemple : wood : 12 iron : 5 food : 2 inactive : 6
 def displayOrganisation():
 
-
+#retirer un worker d'un poste de travail le rendant inactif
 def removeWorker():
 
+#prend x workers inactifs pour les placer sur le poste de travail souhaité
 def putWorkerOnWork():
