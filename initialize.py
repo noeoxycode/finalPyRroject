@@ -24,6 +24,14 @@ def initialize(id):
                     "wood": txt['game']['levels']['wood'],
                     "iron": txt['game']['levels']['iron'],
                     "food": txt['game']['levels']['food']
+                },
+                "worker": {
+                    "inactive": txt['game']['worker']['inactive'],
+                    "active": {
+                        "wood": txt['game']['worker']['active']['wood'],
+                        "iron": txt['game']['worker']['active']['iron'],
+                        "food": txt['game']['worker']['active']['food']
+                    }
                 }
             }
 

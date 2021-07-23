@@ -25,8 +25,8 @@ def start():
             # choice = actions.getChoices(newEvent)
             # if choice == 1:
                 # actions.applyEvent(newEvent)
-            while i == 1:
-                timer.startTime()
+            #while i == 1:
+             #   timer.startTime()
         elif i == 2:
             loadGame()
         else:

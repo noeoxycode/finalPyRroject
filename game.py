@@ -1,4 +1,5 @@
 import timer
+from inGame import inGameMenu
 
 game = {
     "wood": 0,
@@ -13,6 +14,14 @@ game = {
         "wood": 0,
         "iron": 0,
         "food": 0
+    },
+    "worker": {
+        "inactive": 0,
+        "active": {
+            "wood": 0,
+            "iron": 0,
+            "food": 0
+        }
     }
 }
 
@@ -32,4 +41,5 @@ def setValues(content, dif):
     game['levels']['wood'] = content['levels']['wood'] * dif
     game['levels']['iron'] = content['levels']['iron'] * dif
     game['levels']['food'] = content['levels']['food'] * dif
-    print(game)
+    game['worker']['inactive'] = content['worker']['inactive'] * dif
+    inGameMenu(game)
