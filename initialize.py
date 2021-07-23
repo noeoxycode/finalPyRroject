@@ -11,6 +11,8 @@ def initialize(id):
     data = json.load(file)
     for txt in data['scenario']:
         if txt['id'] == id:
+            print("Vous avez choisi le scénario", txt['name'])
+            print(txt['description'], "\n")
             game = {
                 "wood": txt['game']['wood'],
                 "iron": txt['game']['iron'],

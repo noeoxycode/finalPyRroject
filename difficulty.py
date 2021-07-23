@@ -3,7 +3,7 @@ def difficulty():
     print("Choisir un niveau de difficulté:")
     print("1 facile\n2 moyen\n3 difficile")
 
-    while i!=1 or i!=2 or i!=3:
+    while i != 1 or i != 2 or i != 3:
         i = int(input())
         if i == 1:
             return 3
