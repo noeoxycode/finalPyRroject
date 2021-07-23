@@ -3,6 +3,7 @@
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import actions
+import game
 import timer
 from loadGame import loadGame
 from newGame import newGame
@@ -26,7 +27,7 @@ def start():
             # if choice == 1:
                 # actions.applyEvent(newEvent)
             while i == 1:
-                timer.startTime()
+                game.gameInit()
         elif i == 2:
             loadGame()
         else:

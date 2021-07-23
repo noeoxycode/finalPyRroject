@@ -18,7 +18,7 @@ game = {
 
 
 def gameInit():
-    timer.time()
+    timer.timer(game)
 
 
 def setValues(content, dif):

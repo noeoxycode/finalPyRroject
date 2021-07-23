@@ -27,7 +27,7 @@ def getEvent():
 
 # check si la partie est finie
 def checkEndGame():
-    if game.satisfaction <= 0:
+    if game['satisfaction'] <= 0:
         return 1
     else:
         return 0
@@ -56,24 +56,23 @@ def applyEvent(event):
                 game['levels']['wood'] += int(event['effects'][i].split()[0])
             elif argsMat[2] == "fer":
                 game['levels']['iron'] += int(event['effects'][i].split()[0])
-    print(event)
-    print(game)
 
 
 # check si il est temps de fournir un event,si oui on getEvent puis applyEvent
 def checkEvent():
-    cptWithoutEvent = 0
-    if cptWithoutEvent == game.cptWithoutEvent:
-        newEvent = getEvent()
-        # afficher choix pour joueur
-        choice = getChoices(newEvent)
-        if choice == 1:
-            applyEvent(newEvent)
+    # if cptWithoutEvent == game['cptWithoutEvent']:
+    newEvent = getEvent()
+    # afficher choix pour joueur
+    choice = getChoices(newEvent)
+    if choice == 1:
+        applyEvent(newEvent)
 
 
 def getChoices(event):
-    for i in range(len(event['choices'])):
-        print(i, event['choices'][i])
+    i = 1
+    for txt in (event['choices']):
+        print(i, txt)
+        i += 1
     id = int(input())
     return id
 
