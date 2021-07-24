@@ -1,7 +1,12 @@
 import json
 from random import choice
 
+from choiceEndDay import choiceEndDay
 from game import game
+from game import gameInit
+
+cptEvent = 0
+cptApplyEvent = 0
 
 
 def endGame():
@@ -60,12 +65,12 @@ def applyEvent(event):
 
 # check si il est temps de fournir un event,si oui on getEvent puis applyEvent
 def checkEvent():
-    # if cptWithoutEvent == game['cptWithoutEvent']:
-    newEvent = getEvent()
-    # afficher choix pour joueur
-    choice = getChoices(newEvent)
-    if choice == 1:
-        applyEvent(newEvent)
+    if cptEvent == 0 and cptApplyEvent == 0:
+        newEvent = getEvent()
+        # afficher choix pour joueur
+        choice = getChoices(newEvent)
+        if choice == 1:
+            applyEvent(newEvent)
 
 
 def getChoices(event):
@@ -81,5 +86,6 @@ def getChoices(event):
 def checkActions():
     if checkEndGame() == 0:
         checkEvent()
+        choiceEndDay()
     else:
         endGame()

@@ -1,4 +1,6 @@
-import timer
+from datetime import datetime
+
+import actions
 
 game = {
     "wood": 0,
@@ -18,7 +20,9 @@ game = {
 
 
 def gameInit():
-    timer.timer(game)
+    while 1:
+        if datetime.now().minute % 2 == 0:
+            actions.checkActions()
 
 
 def setValues(content, dif):
@@ -32,4 +36,3 @@ def setValues(content, dif):
     game['levels']['wood'] = content['levels']['wood'] * dif
     game['levels']['iron'] = content['levels']['iron'] * dif
     game['levels']['food'] = content['levels']['food'] * dif
-    print(game)
