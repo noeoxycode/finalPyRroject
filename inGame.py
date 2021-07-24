@@ -21,10 +21,14 @@ def menuChoice(value,game):
 #affiche le nombre de workers par poste de travail
 #exemple : wood : 12 iron : 5 food : 2 inactive : 6
 def displayOrganisation(game):
-    print("inactifs", game['worker']['inactive'])
-    print("wood", game['worker']['active']['wood'])
-    print("iron", game['worker']['active']['iron'])
-    print("food", game['worker']['active']['food'])
+    i = 0
+    while i != 1:
+        print("inactifs", game['worker']['inactive'])
+        print("wood", game['worker']['active']['wood'])
+        print("iron", game['worker']['active']['iron'])
+        print("food", game['worker']['active']['food'])
+        print("Taper 1 pour revenir au menu")
+        i = int(input())
 
 
 
@@ -127,4 +131,10 @@ def putWorkerOnWork(game):
 #affiche l'ensemble des ressources à disposition du joueur ainsi que sa production horaire par ressource
 #exemple : wood : 200 12wood/h
 def ressourcesView(game):
-    print("Ici les ressources")
+    i = 0
+    while i != 1:
+        print("wood: ", game["wood"], " production: ", game['worker']['active']['wood'], "/3h")
+        print("iron: ", game["iron"], " production: ", game['worker']['active']['iron'], "/3h")
+        print("food: ", game["food"], " production: ", game['worker']['active']['food'], "/3h")
+        print("Taper 1 pour revenir au menu")
+        i = int(input())

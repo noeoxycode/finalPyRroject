@@ -92,3 +92,4 @@ def checkActions():
 
 def getRessources(game):
     #ici la recup des ressources toutes les heures
+    print("test")
