@@ -89,3 +89,6 @@ def checkActions():
         choiceEndDay()
     else:
         endGame()
+
+def getRessources(game):
+    #ici la recup des ressources toutes les heures

@@ -1,3 +1,4 @@
+import inGame
 from inGame import inGameMenu
 from datetime import datetime
 
@@ -32,6 +33,9 @@ def gameInit():
     while 1:
         if datetime.now().minute % 2 == 0:
             actions.checkActions()
+        if datetime.now().minute % 1 == 0:
+            actions.getRessources(game)
+
 
 
 def setValues(content, dif):
