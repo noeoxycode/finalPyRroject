@@ -31,7 +31,7 @@ game = {
 
 def gameInit():
     while 1:
-        if datetime.now().minute % 2 == 0:
+        if datetime.now().minute % 8 == 0:
             actions.checkActions()
         else:
             inGameMenu(game)

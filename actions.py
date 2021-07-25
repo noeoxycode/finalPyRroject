@@ -1,4 +1,5 @@
 import json
+import sys
 import time
 from random import choice
 
@@ -10,7 +11,8 @@ cptApplyEvent = 0
 
 
 def endGame():
-    print("Game over")
+    print("Vous avez perdu la partie. Merci d'avoir joué.")
+    sys.exit()
 
 
 # renvoie un event
