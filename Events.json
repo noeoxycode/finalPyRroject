@@ -4,13 +4,41 @@
         "name" : "Expédition extra muros",
         "description" : "Une expédition extra muros est organisée par le commandant Erwin Smith. Le but de cet expédition est de récupérer le district de Trost. Sans ce dernier, vous n’aurez jamais assez de nourriture pour la population des murs. Souhaitez vous y aller ? ",
         "choices" : ["Oui", "Non"],
-        "effects": ["+1 level nourriture", "-15 bois", "+10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "-15 habitation", "+10 population", "+15 satisfaction"]
+        "effects": ["+1 level nourriture", "-15 bois", "+10 nourriture", "+1 level bois", "+20 habitation", "+15 satisfaction"]
     },
     {
         "id" : 2,
         "name" : "Attaque dans le mur Sina",
         "description" : "Des titans sont apparus à l'intérieur du mur Sina. La garnison n'a trouvé aucune faille dans le mur. Le mystère s'aggrandi donc autour des titans. Que voulez-vous faire ?",
         "choices" : ["Envoyez les armées essayer de tuer les titans.", "Attendre que la nuit tombe pour intervenir (les titans ne bougent pas la nuit)"],
-        "effects": ["+1 level nourriture", "-15 bois", "+10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "-15 habitation", "+10 population", "+15 satisfaction"]
-    }] 
+        "effects": ["-15 bois", "-10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "-15 habitation", "-10 population", "-15 satisfaction"]
+    },
+    {
+        "id" : 3,
+        "name" : "Tsunami",
+        "description" : "Un tsunami arrive directement au niveau de vos réculotes. Vous devez donc tout refaire pour pouvoir continuer à nourir vos habitants. Que voulez-vous faire ?",
+        "choices" : ["Ne rien faire.", "Tout reconstruire"],
+        "effects": ["-100 nourriture", "-15 habitation", "-150 satisfaction"]
+    },
+    {
+        "id" : 4,
+        "name" : "Tremblement de terre",
+        "description" : "Un tremblement de terre est en train d'avoir lieu. Que voulez-vous faire ?",
+        "choices" : ["Rassurez votre population et entamer la reconstruction", "Ne rien faire"],
+        "effects": ["+1 level bois", "+15 habitation", "+10 population", "+30 satisfaction"]
+    },
+    {
+        "id" : 5,
+        "name" : "Attaque d'une ville voisine",
+        "description" : "Le roi voisin a ordonné à son armée de lancer une attaque contre vous. Que voulez-vous faire ?",
+        "choices" : ["Envoyez l'armée se battre.", "Laisser la ville se faire prendre d'assault"],
+        "effects": ["+1 level nourriture", "+50 bois", "+10 nourriture", "+15 fer", "+1 level fer", "+1 level bois", "+15 habitation", "+10 population", "+15 satisfaction"]
+    },
+    {
+        "id" : 6,
+        "name" : "Alliance avec une ville voisine",
+        "description" : "Une ville voisine vous propose une alliance temporaire afin de détruire une autre alliance. Que voulez-vous faire ?",
+        "choices" : ["Refuser l'alliance. Vous n'avez pas besoin d'aide pour vous battre.", "Vous acceptez l'alliance."],
+        "effects": ["+10 nourriture", "-15 habitation", "-10 population", "-15 satisfaction"]
+    }]
 }
