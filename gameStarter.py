@@ -1,3 +1,4 @@
+import inGame
 from inGame import inGameMenu
 from datetime import datetime
 
@@ -30,8 +31,14 @@ game = {
 
 def gameInit():
     while 1:
-        if datetime.now().minute % 2 == 0:
+        if datetime.now().minute % 8 == 0:
             actions.checkActions()
+        else:
+            inGameMenu(game)
+        if datetime.now().minute % 1 == 0:
+            actions.getRessources()
+
+
 
 
 def setValues(content, dif):
@@ -46,4 +53,9 @@ def setValues(content, dif):
     game['levels']['iron'] = content['levels']['iron'] * dif
     game['levels']['food'] = content['levels']['food'] * dif
     game['worker']['inactive'] = content['worker']['inactive'] * dif
-    inGameMenu(game)
+    game['worker']['active']['wood'] = content['worker']['active']['wood'] * dif
+    game['worker']['active']['iron'] = content['worker']['active']['iron'] * dif
+    game['worker']['active']['food'] = content['worker']['active']['food'] * dif
+    gameInit()
+
+    # dayAction(game)
