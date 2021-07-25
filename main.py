@@ -2,7 +2,7 @@
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+import sys
 
 import schedule, time
 import gameStarter
@@ -20,31 +20,15 @@ def start():
         i = int(input())
         if i == 1:
             newGame()
-            # time.timer()
-            # boucles toutes les 8 minutes pour déclencher un évènement
-            # mettre bon ou mauvais event dans JSON
-            # actions.checkActions()
-            # newEvent = actions.getEvent()
-            # afficher choix pour joueur
-            # choice = actions.getChoices(newEvent)
-            # if choice == 1:
-                # actions.applyEvent(newEvent)
             while i == 1:
                 gameStarter.gameInit()
         elif i == 2:
             # lui permettra de choisir la save qu'il veut
-            # j = 1;
-            # print("Choisissez un scénario: ")
-            # file = open("Scenario.json")
-            # data = json.load(file)
-            # for txt in data['scenario']:
-            #   print(j, txt['name'])
-            #  j += 1
-
-            # file.close()
-            # id = int(input())
-            # loadGame(id)
             loadGame.loadGame()
+        elif i == 3:
+            # quitte le programme
+            print("Merci d'avoir joué.")
+            sys.exit()
         else:
             print("Mettez un nombre entre 1 et 2")
 

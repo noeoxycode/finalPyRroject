@@ -146,7 +146,6 @@ def putWorkerOnWork(game):
 #exemple : wood : 200 12wood/h
 def ressourcesView(game):
     i = 0
-    print(game)
     while i != 1:
         print("wood: ", game["wood"], " production: ", game['worker']['active']['wood'], "/3h")
         print("iron: ", game["iron"], " production: ", game['worker']['active']['iron'], "/3h")

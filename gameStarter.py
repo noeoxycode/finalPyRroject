@@ -30,7 +30,6 @@ game = {
 
 
 def gameInit():
-    print("Je suis dans gameInit()")
     while 1:
         if datetime.now().minute % 2 == 0:
             actions.checkActions()
