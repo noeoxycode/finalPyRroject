@@ -5,7 +5,6 @@ def inGameMenu(game) :
     print("2 : Retirer x ouvrier(s) d'une zone de production")
     print("3 : Assigner un ouvrier libre à une tache")
     print("4 : Voir les ressources à disposition et la production horaire")
-    print("5 : Quitter")
     val = int(input())
     menuChoice(val, game)
 
@@ -43,7 +42,7 @@ def removeWorker(game):
         i = int(input())
         if i == 1:
             if game['worker']['active']['wood'] == 0 :
-                print("Vous n'avez pas de'ouvrier sur ce poste de travail")
+                print("Vous n'avez pas d'ouvrier sur ce poste de travail\n")
             else :
                 print("Vous avez", game['worker']['active']['wood'], "de personnes partie chercher du bois")
                 print("Combien de personne voulez vous déplacer ?")
@@ -55,7 +54,7 @@ def removeWorker(game):
                     print("Vous n'avez pas assez de personnes inactives")
         elif i == 2:
             if game['worker']['active']['wood'] == 0 :
-                print("Vous n'avez pas de'ouvrier sur ce poste de travail")
+                print("Vous n'avez pas d'ouvrier sur ce poste de travail\n")
             else :
                 print("Vous avez", game['worker']['active']['iron'], "de personnes partie à l'usine")
                 print("Combien de personne voulez vous déplacer ?")
@@ -68,7 +67,7 @@ def removeWorker(game):
                     print("Vous n'avez pas assez de personnes inactives")
         elif i == 3:
             if game['worker']['active']['wood'] == 0 :
-                print("Vous n'avez pas de'ouvrier sur ce poste de travail")
+                print("Vous n'avez pas d'ouvrier sur ce poste de travail\n")
             else :
                 print("Vous avez", game['worker']['active']['food'], "de personnes partie faire de la nourriture")
                 print("Combien de personne voulez vous déplacer ?")
@@ -92,7 +91,7 @@ def putWorkerOnWork(game):
         print("1 ajouter des ouvriers chercher du bois")
         print("2 ajouter des ouvriers à l'usine")
         print("3 ajouter des ouvriers faire de la nourriture")
-        print("4 Quitter")
+        print("4 Retour")
         i = int(input())
         if i == 1:
             print("Vous avez", game['worker']['inactive'],"de personnes inactifs")
@@ -101,6 +100,7 @@ def putWorkerOnWork(game):
             if j <= game['worker']['inactive']:
                 game['worker']['inactive'] = game['worker']['inactive']-j
                 game['worker']['active']['wood'] = game['worker']['active']['wood'] + j
+                print("Vous avez déplacer",j,"ouvriers pour aller chercher du bois\n")
             else:
                 print("Vous n'avez pas assez de personnes inactives")
         elif i == 2:
@@ -110,6 +110,7 @@ def putWorkerOnWork(game):
             if j <= game['worker']['inactive']:
                 game['worker']['inactive'] = game['worker']['inactive'] - j
                 game['worker']['active']['iron'] = game['worker']['active']['iron'] + j
+                print("Vous avez déplacer", j, "ouvriers à l'usine\n")
             else:
                 print("Vous n'avez pas assez de personnes inactives")
         elif i == 3:
@@ -119,6 +120,7 @@ def putWorkerOnWork(game):
             if j <= game['worker']['inactive']:
                 game['worker']['inactive'] = game['worker']['inactive'] - j
                 game['worker']['active']['food'] = game['worker']['active']['food'] + j
+                print("Vous avez déplacer", j, "ouvriers pour aller faire de la nourriture\n")
             else:
                 print("Vous n'avez pas assez de personnes inactives")
         elif i == 4:
