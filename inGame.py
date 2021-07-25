@@ -1,5 +1,18 @@
+import gameStarter
 
-def inGameMenu(game) :
+
+def dayAction(game):
+    print("Voulez vous effectuer des actions en attendant le prochain évènement ?")
+    print("(1 = oui, 2 = non)")
+    val = ""
+    while val != 1 or val != 2:
+        val = int(input())
+    if val == 1:
+        inGameMenu(game)
+    else:
+        gameStarter.gameInit()
+
+def inGameMenu(game):
     print("Quelle action voulez-vous effectuer ?")
     print("1 : Voir la disposition actuelle de vos ouvriers")
     print("2 : Retirer x ouvrier(s) d'une zone de production")
@@ -29,6 +42,7 @@ def displayOrganisation(game):
         print("food", game['worker']['active']['food'])
         print("Taper 1 pour revenir au menu")
         i = int(input())
+        gameStarter.gameInit()
 
 
 
@@ -79,8 +93,7 @@ def removeWorker(game):
                 else:
                     print("Vous n'avez pas assez de personnes inactives")
         elif i == 4:
-            print("Faudrait quitter en fait")
-            inGameMenu(game)
+            gameStarter.gameInit()
 
         else:
             print("Mettre un nombre entre 1 et 4")
@@ -122,8 +135,7 @@ def putWorkerOnWork(game):
             else:
                 print("Vous n'avez pas assez de personnes inactives")
         elif i == 4:
-            print("Faudrait quitter en fait")
-            inGameMenu(game)
+            gameStarter.gameInit()
 
         else:
             print("Mettre un nombre entre 1 et 4")
@@ -132,9 +144,11 @@ def putWorkerOnWork(game):
 #exemple : wood : 200 12wood/h
 def ressourcesView(game):
     i = 0
+    print(game)
     while i != 1:
         print("wood: ", game["wood"], " production: ", game['worker']['active']['wood'], "/3h")
         print("iron: ", game["iron"], " production: ", game['worker']['active']['iron'], "/3h")
         print("food: ", game["food"], " production: ", game['worker']['active']['food'], "/3h")
         print("Taper 1 pour revenir au menu")
         i = int(input())
+        gameStarter.gameInit()

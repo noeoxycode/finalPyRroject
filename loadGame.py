@@ -1,30 +1,41 @@
 # va lire et récupérer les données d'une sauvegarde
 import json
 
-from game import setValues
+from gameStarter import setValues
 
 
-def loadGame(id):
+def loadGame():
+    print("Comment se nomme votre sauvegarde")
+    name = ""
+    while name == "":
+        name = input()
 
-    game = {}
-    file = open("Save.json")
+    file = open(name+".json")
     data = json.load(file)
-    for txt in data['scenario']:
-        if txt['id'] == id:
-            game = {
-                "wood": txt['game']['wood'],
-                "iron": txt['game']['iron'],
-                "food": txt['game']['food'],
-                "people": txt['game']['people'],
-                "houses": txt['game']['houses'],
-                "dateTime": 0,
-                "satisfaction": txt['game']['satisfaction'],
-                "levels": {
-                    "wood": txt['game']['levels']['wood'],
-                    "iron": txt['game']['levels']['iron'],
-                    "food": txt['game']['levels']['food']
-                }
+
+    game = {
+        "wood": data['wood'],
+        "iron": data['iron'],
+        "food": data['food'],
+        "people": data['people'],
+        "houses": data['houses'],
+        "date": data['date'],
+        "satisfaction": data['satisfaction'],
+        "levels": {
+            "wood": data['levels']['wood'],
+            "iron": data['levels']['iron'],
+            "food": data['levels']['food']
+        },
+        "worker": {
+            "inactive": data['worker']['inactive'],
+            "active": {
+                "wood": data['worker']['active']['wood'],
+                "iron": data['worker']['active']['iron'],
+                "food": data['worker']['active']['food']
             }
-    dif = 3
+        }
+    }
+    print(game)
+    dif = 1
     setValues(game, dif)
     file.close()

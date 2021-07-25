@@ -1,7 +1,7 @@
 import json
 
 from difficulty import difficulty
-from game import setValues
+from gameStarter import setValues
 
 
 # initialise la partie selon le scénario choisi

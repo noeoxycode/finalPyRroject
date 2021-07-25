@@ -5,12 +5,8 @@
 
 
 import schedule, time
-
-import actions
-import choiceEndDay
-import game
-import timer
-from loadGame import loadGame
+import gameStarter
+import loadGame
 from newGame import newGame
 
 
@@ -34,7 +30,7 @@ def start():
             # if choice == 1:
                 # actions.applyEvent(newEvent)
             while i == 1:
-                game.gameInit()
+                gameStarter.gameInit()
         elif i == 2:
             # lui permettra de choisir la save qu'il veut
             # j = 1;
@@ -48,7 +44,7 @@ def start():
             # file.close()
             # id = int(input())
             # loadGame(id)
-            newGame()
+            loadGame.loadGame()
         else:
             print("Mettez un nombre entre 1 et 2")
 
