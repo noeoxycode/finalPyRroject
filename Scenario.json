@@ -7,8 +7,8 @@
         "game" : {
             "wood" : 50,
             "iron" : 20,
-            "people" : 150,
-            "houses" : 5,
+            "people" : 50,
+            "houses" : 20,
             "food" : 100,
             "dateTime" : null,
             "satisfaction" : 15,
@@ -18,7 +18,7 @@
                 "food" : 2
             },
             "worker":{
-                "inactive": 150,
+                "inactive": 50,
                 "active": {
                     "wood" : 0,
                     "iron" : 0,
@@ -29,21 +29,55 @@
         "events": [ 1, 2, 3 ]
     },{
         "id" : 2,
-        "name" : "test",
-        "description" : "Vous etes le roi des murs Sina, Rose et Maria. Les murs protegent le reste de la population depuis plus de cent ans. Votre objectif, ici, est de repousser les Titans, ces immenses creatures devorant des humains pour leur plaisir. Des personnages viendront vous proposer des marches que vous etes en mesure d’accepter ou non. Gardez juste votre objectif en tete : faire perdurer la race humaine.",
-        "date" : "11-07-2150",
+        "name" : "Moyen-Age",
+        "description" : "Vous etes le roi d'un pays puissant. Faite en sorte que la satisfaction de vos habitants augmente et accumuler le plus de ressources possible car des évenements peuvent apparaitre et vous pouvez perdre tout votre royaume.",
+        "date" : "12-07-1320",
         "game" : {
-            "wood" : 25,
-            "iron" : 20,
-            "people" : 150,
-            "houses" : 5,
-            "food" : 100,
+            "wood" : 50,
+            "iron" : 5,
+            "people" : 250,
+            "houses" : 100,
+            "food" : 250,
+            "dateTime" : null,
+            "satisfaction" : 15,
+            "levels" : {
+                "wood" : 2,
+                "iron" : 1,
+                "food" : 1
+            },"worker":{
+                "inactive": 250,
+                "active": {
+                    "wood" : 0,
+                    "iron" : 0,
+                    "food" : 0
+                }
+            }
+        },
+        "events": [ 1, 2, 3 ]
+    },{
+        "id" : 3,
+        "name" : "Seconde guerre mondial",
+        "description" : "Vous etes le dirigeant d'un pays en pleine seconde guerre mondial. Accumuler le plus de ressources possible avant que les ennemis viennent vous attaquer et faite en sorte de garder une satisfaction de la population elever pour que vos habitant continu a vous suivre.",
+        "date" : "05-07-1942",
+        "game" : {
+            "wood" : 30,
+            "iron" : 100,
+            "people" : 250,
+            "houses" : 100,
+            "food" : 270,
             "dateTime" : null,
             "satisfaction" : 15,
             "levels" : {
                 "wood" : 1,
-                "iron" : 1,
+                "iron" : 2,
                 "food" : 2
+            },"worker":{
+                "inactive": 250,
+                "active": {
+                    "wood" : 0,
+                    "iron" : 0,
+                    "food" : 0
+                }
             }
         },
         "events": [ 1, 2, 3 ]
